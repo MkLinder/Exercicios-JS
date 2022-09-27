@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]  //Entre [] coloca-se a posição do parágrafo, senão ele executará em todos.
+        document.write('Está esrito assim: ' + p1.innerText) // Aqui mostra o texto mas sem a formatação.
+        // document.write(p1.innerHTML) // Aqui ele mostra o texto com a formatação completa.
+
+        //Podemos fazer alterações na página:
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+        p1.style.color = 'blue'
+
+        //Alterando por 'id, class, name...' :
+            // var d = window.document.getElementById('msg')
+            // d.style.background = 'green'
+            // d.innerText = 'Estou aguardando...'
+
+            // var d = window.document.getElementsByName('msg')[0]
+            // d.innerText = 'Olá'
+
+            // var d = window.document.getElementsByClass('msg')[0]
+            // d.innerText = 'Hello'
+
+            // A mais RECOMENDADA é querySeletor ou querySelectorAll:
+            // Quando usado 'id' é representado por '#' e quando usado por 'class' é representado por '.'
+            // var d = window.document.querySelector('div#msg')
+            // d.style.color = 'blue'
+
+    </script>
+</body>
+</html>
